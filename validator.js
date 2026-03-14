@@ -1,6 +1,8 @@
 function validate(username, password){
 
-    // BUG: no validation implemented
+    if(!username || !password) {
+        return false;
+    }
 
     return true;
 }
