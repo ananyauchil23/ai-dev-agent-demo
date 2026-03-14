@@ -1,16 +1,14 @@
-const validate = require('./validator');
-
 function login(username, password) {
 
-    if(!validate(username, password)) {
-        return "Username and password cannot be empty";
+    if (!username || !password) {
+        return "Username or password cannot be empty";
     }
 
     if(username === "admin" && password === "admin123"){
         return "Login success";
     }
 
-    return "Login failed";
+    return "Invalid username or password";
 }
 
 module.exports = login;
