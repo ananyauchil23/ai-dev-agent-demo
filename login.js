@@ -1,6 +1,10 @@
+const validate = require('./validator');
+
 function login(username, password) {
 
-    // BUG: allows empty username and password
+    if(!validate(username, password)) {
+        return "Username and password cannot be empty";
+    }
 
     if(username === "admin" && password === "admin123"){
         return "Login success";
