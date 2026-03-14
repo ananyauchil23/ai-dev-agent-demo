@@ -1,6 +1,7 @@
 function login(username, password) {
-
-    // BUG: allows empty username and password
+    // Trim username and password
+    username = username.trim();
+    password = password.trim();
 
     if(username === "admin" && password === "admin123"){
         return "Login success";
