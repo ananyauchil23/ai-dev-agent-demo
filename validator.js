@@ -1,6 +1,8 @@
 function validate(username, password){
 
-    // BUG: no validation implemented
+    if(password.length < 6){
+        return "Password must be at least 6 characters long";
+    }
 
     return true;
 }
