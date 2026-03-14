@@ -1,14 +1,14 @@
 function login(username, password) {
 
     if (!username || !password) {
-        return "Username or password cannot be empty";
+        return "Username and password cannot be empty";
     }
 
     if(username === "admin" && password === "admin123"){
         return "Login success";
     }
 
-    return "Invalid username or password";
+    return "Login failed";
 }
 
 module.exports = login;
